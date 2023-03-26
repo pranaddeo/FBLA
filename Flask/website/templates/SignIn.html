@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+  <title>Sign  In</title>
+</head>
+<body>
+<!-- Page Setup -->
+  <header class="TBanner"></header>
+  <a href = "/"><img src="{{ url_for('static', filename='Logo.png') }}" class="logo"></a>
+  <div class = "mainhead">LHS Student Involvement Tracker</div>
+  <div class="container">
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+<!-- Menu Setup -->
+    <div class="dropdown">
+      <div class = "hov">
+        <div class = "bar one"></div>
+        <div class = "bar two"></div>
+        <div class = "bar three"></div>
+        <div class = "square"></div>
+      </div>
+      <div class="dropdown-content">
+        <a href="/Prizes">Prizes</a>
+        <a href="/SOTM">SOTM</a>
+        <a href="/quarterly-report">Quarterly Report</a>
+        <a href="/FAQ">FAQ</a>
+      </div>
+    </div>
+<!-- Form setup for signing in -->
+    <form method="POST">
+      <h2>Sign In</h2>
+      <br>
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email">
+      <br>
+      <br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
+      <br><br><br>
+      <input type="submit" value="Login">
+      <br><br>
+<!-- Link for a person without and account -->
+      <p>Don't have an account? <a href="{{url_for('auth.signup')}}" class="signup-link">Sign up</a></p>
+    </form>
+  </div>
+</body>
+</html>

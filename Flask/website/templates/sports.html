@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Page Setup -->
+  <script src="java.js"></script>
+  <header class="TBanner"></header>
+  <div class = "mainhead">LHS Student Involvement Tracker</div>
+<!-- If then statements checking if student is logged in -->
+  {%if current_user.is_anonymous%}
+  <a href="/SignIn"><button class = "Sign">Sign In</button></a>
+  <a href = "/"><img src="{{ url_for('static', filename='Logo.png') }}" class="logo"></a>
+  {%else%}
+  <div class = "name">{{session.first_name}} {{session.last_name}}</div>
+  {%if session.type == "admin"%}
+  <a href = "/home/Admin"><img src="{{ url_for('static', filename='Logo.png') }}" class="logo"></a>
+  {%endif%}
+  {%if session.type == "student"%}
+  <a href = "/home/Student"><img src="{{ url_for('static', filename='Logo.png') }}" class="logo"></a>
+  {%endif%}
+  {%if session.type == "sponsor"%}
+  <a href = "/home/Sponsor"><img src="{{ url_for('static', filename='Logo.png') }}" class="logo"></a>
+  {%endif%}
+  {%endif%}
+  <div class = "name">{{session.first_name}} {{session.last_name}}</div>
+<!-- Setup for all the sports that are going to be listed -->
+  <div class = "sportsBanner"></div>
+  <div class = "Sports">
+    <div class = "sportsText">Basketball</div>
+    <br>
+    <div class = "sportsText">Football</div>
+    <br>
+    <div class = "sportsText">Volleyball</div>
+    <br>
+    <div class = "sportsText">Baseball</div>
+    <br>
+    <div class = "sportsText">Soccer</div>
+    <br>
+    <div class = "sportsText">Tennis</div>
+    <br>
+    <div class = "sportsText">Swim</div>
+  </div>
+<!-- Menu Setup -->
+  <div class="dropdown">
+    <div class = "hov">
+      <div class = "bar one"></div>
+      <div class = "bar two"></div>
+      <div class = "bar three"></div>
+      <div class = "square"></div>
+    </div>
+    <div class="dropdown-content">
+      <a href="/Prizes">Prizes</a>
+      <a href="/SOTM">SOTM</a>
+      <a href="/quarterly-report">Quarterly Report</a>
+      <a href="/FAQ">FAQ</a>
+    </div>
+  </div>
+  
+<body>
+</html>

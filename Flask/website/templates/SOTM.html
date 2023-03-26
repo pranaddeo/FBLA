@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentOfTheMonth</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style3.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+</head>
+<!-- Page Setup -->
+<body>
+  <header class="TBanner"></header>
+  <div class = "mainhead">LHS Student Involvement Tracker</div>
+<!-- If then statements checking if student is logged in -->
+  {%if current_user.is_anonymous%}
+  <a href="/SignIn"><button class = "Sign">Sign In</button></a>
+  <a href = "/"><img src="{{ url_for('static', filename='Logo.png') }}" class="logo"></a>
+  {%else%}
+  <div class = "name">{{session.first_name}} {{session.last_name}}</div>
+  {%if session.type == "admin"%}
+  <a href = "/home/Admin"><img src="{{ url_for('static', filename='Logo.png') }}" class="logo"></a>
+  {%endif%}
+  {%if session.type == "student"%}
+  <a href = "/home/Student"><img src="{{ url_for('static', filename='Logo.png') }}" class="logo"></a>
+  {%endif%}
+  {%if session.type == "sponsor"%}
+  <a href = "/home/Sponsor"><img src="{{ url_for('static', filename='Logo.png') }}" class="logo"></a>
+  {%endif%}
+  {%endif%}
+<!-- Menu Setup -->
+  <div class="dropdown">
+    <div class = "hov">
+      <div class = "bar one"></div>
+      <div class = "bar two"></div>
+      <div class = "bar three"></div>
+      <div class = "square"></div>
+    </div>
+    <div class="dropdown-content">
+      <a href="/Prizes">Prizes</a>
+      <a href="/quarterly-report">Quarterly Report</a>
+      <a href="/FAQ">FAQ</a>
+<!-- If then statements checking if student is logged in -->
+      {%if current_user.is_authenticated%}
+      <a href="/NewClub">New Club</a>
+      <a href="/logout">Sign Out</a>
+      {%endif%}
+    </div>
+  </div>
+  <br></br>
+  <br></br>
+  <br></br>
+  <br></br>
+  <br></br>
+  <br></br>
+<!-- Setup for the Sttudent of the Month Form -->
+  <div class="container">
+    <h1>Student of the Month</h1>
+  <div class="accordion">
+      <div class="accordion-item">
+          <div class="accordion-header">
+              <h3>Student with the highest points this quarter</h3>
+          </div>
+          <div class="accordion-content"></div>
+             <h4>{{session.highestfn}} {{session.highestln}}</h4>
+      </div>
+      <div class="accordion-item">
+          <div class="accordion-header">
+              <h3>Senior of the month</h3>
+          </div>
+          <div class="accordion-content"> </div>
+          <h4>{{session.sotm12fn}} {{session.sotm12ln}}</h4>
+         
+      </div>
+      <div class="accordion-item">
+          <div class="accordion-header">
+              <h3>Junior of the Month</h3>
+          </div>
+          <div class="accordion-content"></div>
+              <h4>{{session.sotm11fn}} {{session.sotm11ln}}</h4>
+      </div>
+            <div class="accordion-item">
+          <div class="accordion-header">
+              <h3>Sophomore of the Month</h3>
+          </div>
+          <div class="accordion-content"></div>
+              <h4>{{session.sotm10fn}} {{session.sotm10ln}}</h4>
+      </div>
+            <div class="accordion-item">
+          <div class="accordion-header">
+              <h3>Freshman of the Month</h3>
+          </div>
+          <div class="accordion-content"></div>
+              <h4>{{session.sotm9fn}} {{session.sotm9ln}}</h4>
+      </div>
+    </body>
+</html>

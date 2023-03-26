@@ -1,0 +1,296 @@
+/* Background image*/
+body {
+  background-image: url('Building2.png');
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Comfortaa", sans-serif;
+}
+/* Top of website banner */
+.TBanner {
+  background-color: #073763bb;
+  height: 6vw;
+  width: 100%;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* Logo */
+.logo {
+  position: absolute;
+  top: 0.45vw;
+  left: -1vw;
+  width: 9vw;
+  height:auto;
+}
+/* When person is signed in ,adds name to top right of page */
+.name {
+  text-align: center;
+  color: firebrick;
+  font-size: 1.7vw;
+  font-weight: bold;
+  padding: 0.75vw 1.5vw;
+  background-color: white;
+  border: none;
+  border-radius: 1vw;
+  position: absolute;
+  right: 6.25vw;
+  top: 1.3vw;
+  opacity: 0.75;
+  display: inline-block;
+  white-space: nowrap;
+  }
+/* Title of page */
+.mainhead {
+  color: white;
+  font-family: "Comfortaa", sans-serif;
+  font-weight: bold;
+  position: absolute;
+  left: 7.8vw;
+  font-size: 1.8vw;
+  top: 2.1vw;
+}
+/* Sign in button */
+.Sign{
+  text-align: center;
+  color: firebrick;
+  font-size: 1.7vw;
+  font-weight: bold;
+  height:3.3vw;
+  width: 11vw;
+  background-color: white;
+  border: none;
+  border-radius: 1vw;
+  position: absolute;
+  right: 6.25vw;
+  top: 1.3vw;
+  opacity: 0.75
+}
+/* When sign in button is hovered on */
+.Sign:hover {
+  opacity: 1;
+  background-color: firebrick;
+  color: white;
+  
+}
+/* Hamburger style menu */
+.bar{
+  width: 2.5vw;
+  height: 0.11vw;
+  background-color: white;
+  position: absolute;
+  right: 0;
+}
+
+.bar.one{
+  position: absolute;
+  top: 0vw;
+}
+
+.bar.two{
+  position: absolute;
+  top: 0.8vw;
+}
+
+.bar.three{
+  position: absolute;
+  top: 1.6vw;
+}
+
+.square{
+  width: 4vw;
+  height: 4.4vw;
+  background-color: rgba(255, 255, 255, 0);
+  position: absolute;
+  top: -0.5vw;
+  right: -0.65vw;
+}
+
+.hov{
+  opacity: 0.75;
+}
+/* When hamburger style menu is hovered on */
+.hov:hover{
+  opacity: 1;
+}
+/* Applies to all of website */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+/* Contains info in one small area */
+.container {
+max-width: 800px;
+margin: 0 auto;
+padding: 50px;
+  color: white;
+background-color: #073763bb;
+margin: 20px auto;
+width: 50%;
+max-width: 500px;
+border: 1px solid #073763bb;
+padding: 20px;
+border-radius: 10px;
+font-family: "Comfortaa", sans-serif;
+border-color: #073763bb;
+}
+/* Heading */
+h1 {
+text-align: center;
+margin-bottom: 50px;
+}
+/* Info for items inside container */
+.accordion-item {
+border: 1px solid #ccc;
+margin-bottom: 10px;
+}
+
+.accordion-header {
+color: #073763bb;
+background-color: #eee;
+padding: 10px;
+cursor: pointer;
+}
+
+.accordion-header h3 {
+margin: 0;
+}
+
+.accordion-header .icon {
+display: inline-block;
+width: 10px;
+height: 10px;
+background-color: black;
+margin-left: 10px;
+transform: rotate(45deg);
+color: #073763bb;
+}
+
+.accordion-content {
+display: none;
+}
+
+.accordion-item.active .accordion-header .icon {
+transform: rotate(-135deg);
+}
+
+.accordion-item.active .accordion-content {
+display: block;
+}
+/* Menu dropdown */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 1vw;
+  font-size: 1vw;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: absolute;
+  top: 2.1vw;
+  right: 1.55vw;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 3.9vw;
+  right: -1.55vw;
+  background-color: #073763bb;
+  min-width: 6vw;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: white;
+  padding: 1vw 1vw;
+  text-decoration: none;
+  font-size: 0.8vw;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: firebrick}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* The Modal (background) */
+.modal {
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+
+
+/* The Close Button */
+.close {
+color: firebrick;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: black;
+text-decoration: none;
+cursor: pointer;
+}
+
+/* Modal Header */
+.modal-header {
+padding: 1vw 1vw;
+background-color: #073763e7;
+color: white;
+}
+
+/* Modal Body */
+.modal-body {padding: 0.5vw 0.5vw;}
+
+/* Modal Footer */
+.modal-footer {
+padding: 2px 16px;
+background-color: #5cb85c;
+color: white;
+}
+
+/* Modal Content */
+.modal-content {
+position: absolute;
+top: 15vw;
+left:35vw;
+background-color: #fefefe;
+margin: auto;
+padding: 0;
+border: 1px solid #888;
+width: 30%;
+box-shadow: 0 0 100vw 100vw rgba(0, 0, 0, 0.5);
+animation-name: animatetop;
+animation-duration: 0.6s
+}
+
+/* Add Animation */
+@keyframes animatetop {
+from {top: -10vw; opacity: 0}
+to {top: 15vw; opacity: 1}
+}

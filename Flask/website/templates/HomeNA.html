@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LHS Student Involvement Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Seetting up the page -->
+  <script src="java.js"></script>
+  <header class="TBanner"></header>
+  <div class = "mainhead">LHS Student Involvement Tracker</div>
+  <img src="{{ url_for('static', filename='Logo.png') }}" class="logo">
+  <div class = "welcome">Welcome</div>
+  <div class = "welcomedescription">Welcome to the LHS Student Involvement Tracker!</div>
+<!-- Adding the 3 major buttons -->
+  <a href = "/SignIn"><button class = "Sign">Sign In</button></a>
+  <a href = "/Sports"><button class = "sports">View Sports</button></a>
+  <a href = "/Clubs"><button class = "clubs">View Clubs</button><ul></a>
+<!-- Set up of the menu button -->
+  <div class="dropdown">
+    <div class = "hov">
+      <div class = "bar one"></div>
+      <div class = "bar two"></div>
+      <div class = "bar three"></div>
+      <div class = "square"></div>
+    </div>
+<!-- This page is the main page so these links are always static -->
+    <div class="dropdown-content">
+      <a href="/Prizes">Prizes</a>
+      <a href="/SOTM">SOTM</a>
+      <a href="/quarterly-report">Quarterly Report</a>
+      <a href="/FAQ">FAQ</a>
+    </div>
+  </div>
+<!-- Set up of the middle banner -->
+  <div class="Mbanner">
+    <h1 class = "Mtext1">Upcoming</h1>
+    <br><br>
+    <h1 class = "Mtext2">Events</h1>
+    <div class="line"></div>
+    <h1 class="Mevents1">FBLA State</h1>
+    <br></br>
+    <h1 class = "Mevents2">4/17- 4/19</h1>
+    <h1 class="Mevents3">Tennis Tournament</h1>
+    <br></br>
+    <h1 class = "Mevents4">4/20</h1>
+    <h1 class="Mevents5">NHS Meeting</h1>
+    <br></br>
+    <h1 class = "Mevents6">4/25</h1>
+    <h1 class="Mevents7">Track Competition</h1>
+    <br></br>
+    <h1 class = "Mevents8">4/28</h1>
+
+
+  </div>
+<body>
+</html>

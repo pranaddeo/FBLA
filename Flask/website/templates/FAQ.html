@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style3.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Setting up the Page -->
+  <header class="TBanner"></header>
+  <div class = "mainhead">LHS Student Involvement Tracker</div>
+<!-- If then statements checking if student is logged in -->
+  {%if current_user.is_anonymous%}
+  <a href="/SignIn"><button class = "Sign">Sign In</button></a>
+  <a href = "/"><img src="{{ url_for('static', filename='Logo.png') }}" class="logo"></a>
+  {%else%}
+  <div class = "name">{{session.first_name}} {{session.last_name}}</div>
+  {%if session.type == "admin"%}
+  <a href = "/home/Admin"><img src="{{ url_for('static', filename='Logo.png') }}" class="logo"></a>
+  {%endif%}
+  {%if session.type == "student"%}
+  <a href = "/home/Student"><img src="{{ url_for('static', filename='Logo.png') }}" class="logo"></a>
+  {%endif%}
+  {%if session.type == "sponsor"%}
+  <a href = "/home/Sponsor"><img src="{{ url_for('static', filename='Logo.png') }}" class="logo"></a>
+  {%endif%}
+  {%endif%}
+<!-- Setting up Menu button -->
+  <div class="dropdown">
+    <div class = "hov">
+      <div class = "bar one"></div>
+      <div class = "bar two"></div>
+      <div class = "bar three"></div>
+      <div class = "square"></div>
+    </div>
+    <div class="dropdown-content">
+      <a href="/Prizes">Prizes</a>
+      <a href="/SOTM">SOTM</a>
+      <a href="/quarterly-report">Quarterly Report</a>
+      {% if current_user.is_authenticated%}
+      <a href="/NewClub">New Club</a>
+      <a href="/logout">Sign Out</a>
+      {% endif %}
+    </div>
+  </div>
+  <br></br>
+  <br></br>
+  <br></br>
+  <br></br>
+  <br></br>
+  <br></br>
+<!-- Setting up the FAQ page -->
+  <div class="container">
+      <h1>Frequently Asked Questions</h1>
+    <div class="accordion">
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <h3>How do you add points?</h3>
+            </div>
+            <div class="accordion-content">            </div>
+               <h4> Once you are signed into your account, you should see a "+" icon on the bottom right. Click on it and fill it out, then your club/sport advisor will grant you points. If they feel like the amount you requested dosent add up, then they will deny your points.</h4>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <h3>How do you join a club/sport?</h3>
+            </div>
+            <div class="accordion-content"> </div>
+            <h4>Once you are logged in, you have to fill out a form with the clubs and sports that you are in. The advisors of those will check if you are in them and they will grant you permission to join. They can also deny your request if they want to.</h4>
+           
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <h3>Will my points stack up over the years?</h3>
+            </div>
+            <div class="accordion-content"></div>
+                <h4>Yes, you can stack your points from Freshman year all the way up to the End of Senior Year. Once you graduate, your account will be discontinued. So make sure to spend all your points while you can.</h4>
+        </div>
+    </div>

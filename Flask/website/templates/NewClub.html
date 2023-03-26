@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+  <title>New Club</title>
+</head>
+<body>
+<!-- Page Setup -->
+  <div class="container">
+    <header class="TBanner"></header>
+<!-- If then statements checking if student is logged in -->
+    {%if current_user.is_anonymous%}
+    <a href="/SignIn"><button class = "Sign">Sign In</button></a>
+    <a href = "/"><img src="{{ url_for('static', filename='Logo.png') }}" class="logo"></a>
+    {%else%}
+    <div class = "name">{{session.first_name}} {{session.last_name}}</div>
+    {%if session.type == "admin"%}
+    <a href = "/home/Admin"><img src="{{ url_for('static', filename='Logo.png') }}" class="logo"></a>
+    {%endif%}
+    {%if session.type == "student"%}
+    <a href = "/home/Student"><img src="{{ url_for('static', filename='Logo.png') }}" class="logo"></a>
+    {%endif%}
+    {%if session.type == "sponsor"%}
+    <a href = "/home/Sponsor"><img src="{{ url_for('static', filename='Logo.png') }}" class="logo"></a>
+    {%endif%}
+    {%endif%}
+<!-- Menu Setup -->
+    <div class="dropdown">
+      <div class = "hov">
+        <div class = "bar one"></div>
+        <div class = "bar two"></div>
+        <div class = "bar three"></div>
+        <div class = "square"></div>
+      </div>
+    <div class="dropdown-content">
+      <a href="/Prizes">Prizes</a>
+      <a href="/SOTM">SOTM</a>
+      <a href="/quarterly-report">Quarterly Report</a>
+      <a href="/FAQ">FAQ</a>
+    </div>
+    </div>
+    <div class = "name">{{session.first_name}} {{session.last_name}}</div>
+    <div class = "mainhead">LHS Student Involvement Tracker</div>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+<!-- Code for the new club application form -->
+    <form method = "POST">
+      <h2>New Club Application</h2>
+      <label for="username">Name of Club:</label>
+      <input type="text" id="clubname" name="clubname" required>
+      <br>
+      <br>
+      <label for="username">Name of Sponsor (First and Last) :</label>
+      <input type="text" id="sponsorname" name="sponsorname" required>
+      <br>
+      <br>
+      <label for="username">Sponsor Email:</label>
+      <input type="text" id="sponsoremail" name="sponsoremail" required>
+      <br>
+      <br>
+      <label for="username">Room Number for Meetings:</label>
+      <input type="text" id="roomnum" name="roomnum" required>
+      <br>
+      <br>
+      <br>
+      <input type="submit" value="Submit">
+      <br>
+      <br>
+    </form> 
+  </div>

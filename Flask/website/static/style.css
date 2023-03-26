@@ -1,0 +1,520 @@
+/* Background image of website */
+body {
+  background-image: url('Building2.png');
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Comfortaa", sans-serif;
+}
+/* Button to open view clubs */
+.clubs{
+  text-align: center;
+  color: white;
+  font-size: 1.7vw;
+  font-weight: bold;
+  height:3.3vw;
+  width: 11vw;
+  background-color: #073763bb;
+  border: none;
+  border-radius: 1vw;
+  position: absolute;
+  left: 7vw;
+  top: 21.75vw;
+  opacity: 0.85;
+}
+/* Button to open view sports */
+.sports{
+  text-align: center;
+  color: white;
+  font-size: 1.7vw;
+  font-weight: bold;
+  height:3.3vw;
+  width: 11vw;
+  background-color: firebrick;
+  border: none;
+  border-radius: 1vw;
+  position: absolute;
+  left: 20vw;
+  top: 21.75vw;
+  opacity: 0.85;
+}
+/* Operation to get indication of hovering button */
+.clubs:hover, .sports:hover{
+  opacity: 1;
+}
+/* Top of website banner */
+.TBanner {
+  background-color: #073763bb;
+  height: 6vw;
+  width: 100%;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* Logo of Website */
+.logo {
+  position: absolute;
+  top: 0.45vw;
+  left: -1vw;
+  width: 9vw;
+  height:auto;
+}
+/* Says the title of website */
+.mainhead {
+  color: white;
+  font-family: "Comfortaa", sans-serif;
+  font-weight: bold;
+  position: absolute;
+  left: 7.8vw;
+  font-size: 1.8vw;
+  top: 2.1vw;
+}
+/* Says name of user when signed in */
+.name {
+  text-align: center;
+  color: firebrick;
+  font-size: 1.7vw;
+  font-weight: bold;
+  padding: 0.75vw 1.5vw;
+  background-color: white;
+  border: none;
+  border-radius: 1vw;
+  position: absolute;
+  right: 6.25vw;
+  top: 1.3vw;
+  opacity: 0.75;
+  display: inline-block;
+  white-space: nowrap;
+  }
+/* Button for signing in */
+.Sign{
+  text-align: center;
+  color: firebrick;
+  font-size: 1.7vw;
+  font-weight: bold;
+  height:3.3vw;
+  width: 11vw;
+  background-color: white;
+  border: none;
+  border-radius: 1vw;
+  position: absolute;
+  right: 6.25vw;
+  top: 1.3vw;
+  opacity: 0.75
+}
+/* Indication of hovering over button */
+.Sign:hover {
+  opacity: 1;
+  background-color: firebrick;
+  color: white;
+  
+}
+/* Part of hamburger style menu */
+.bar{
+  width: 2.5vw;
+  height: 0.11vw;
+  background-color: white;
+  position: absolute;
+  right: 0;
+}
+
+.bar.one{
+  position: absolute;
+  top: 0vw;
+}
+
+.bar.two{
+  position: absolute;
+  top: 0.8vw;
+}
+
+.bar.three{
+  position: absolute;
+  top: 1.6vw;
+}
+
+.square{
+  width: 4vw;
+  height: 4.4vw;
+  background-color: rgba(255, 255, 255, 0);
+  position: absolute;
+  top: -0.5vw;
+  right: -0.65vw;
+}
+
+.hov{
+  opacity: 0.75;
+}
+/* Indication of hamburger style menu being hovered */
+.hov:hover{
+  opacity: 1;
+}
+/* Says Welcome */
+.welcome{
+  color: white;
+  font-family: "Comfortaa", sans-serif;
+  font-style: normal;
+  font-size: 4.5vw;
+  font-weight: bold;
+  position: absolute;
+  top: 14.5vw;
+  left: 8.5vw;
+}
+/* Says statement to user */
+.welcomedescription{
+  color: white;
+  font-family: "Comfortaa", sans-serif;
+  font-size: 1.1vw;
+  position: absolute;
+  top: 19.5vw;
+  left: 5vw;
+}
+/* Banner for upcoming events */
+.Mbanner {
+  background-color: #073763bb;
+  height: 10.5vw;
+  width: 100vw;
+  position: absolute;
+  right: 0vw;
+  top: 31vw;
+  font-family: "Comfortaa", sans-serif;
+}
+/* Says Upcoming */
+.Mtext1 {
+  color: white;
+  position: absolute;
+  left: 4vw;
+  text-align: center;
+  top: 1.5vw;
+  font-family: "Comfortaa", sans-serif;
+  font-size: 2.1vw;
+}
+/* Says Events */
+.Mtext2 {
+  color: white;
+  position: absolute;
+  left: 6.3vw;
+  text-align: center;
+  top: 4.5vw;
+  font-size: 2.1vw;
+  font-family: "Comfortaa", sans-serif;
+}
+/* Line to separate title from events */
+.line {
+  width: 0.5vw;
+  height: 7vw;
+  border-radius: 1vw;
+  background-color: white;
+  position: absolute;
+  top: 1.75vw;
+  left: 20vw;
+
+}
+
+/* Div for events */
+.Mevents1, .Mevents2, .Mevents3, .Mevents4, .Mevents5, .Mevents6, .Mevents7, .Mevents8 {
+  color: white;
+  position: absolute;
+  text-align: center;
+  font-size: 2.1vw;
+}
+.Mevents1 {
+  right: 2vw;
+  top: 1.5vw;
+}
+
+.Mevents2 {
+  right: 3.2vw;
+  top: 4.5vw;
+}
+
+.Mevents3 {
+  right: 17vw;
+  top: 1.5vw;
+}
+
+.Mevents4 {
+  right: 25vw;
+  top: 4.5vw;
+}
+
+.Mevents5 {
+  right: 41vw;
+  top: 1.5vw;
+}
+
+.Mevents6 {
+  right: 46vw;
+  top: 4.5vw;
+}
+
+.Mevents7 {
+  right: 58vw;
+  top: 1.5vw;
+}
+
+.Mevents8 {
+  right:66vw;
+  top: 4.5vw;
+}
+
+/* Extra */
+
+/* Style The Dropdown Button */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 1vw;
+  font-size: 1vw;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: absolute;
+  top: 2.1vw;
+  right: 1.55vw;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 3.9vw;
+  right: -1.55vw;
+  background-color: #073763bb;
+  min-width: 6vw;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: white;
+  padding: 1vw 1vw;
+  text-decoration: none;
+  font-size: 0.8vw;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: firebrick}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+
+
+/* The Close Button */
+.close {
+  color: firebrick;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Modal Header */
+.modal-header {
+  padding: 2px 16px;
+  background-color: #073763e7;
+  color: white;
+}
+
+/* Modal Body */
+.modal-body {padding: 2px 16px;}
+
+/* Modal Footer */
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+/* Modal Content */
+.modal-content {
+  position: absolute;
+  top: 15vw;
+  left:35vw;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 30%;
+  box-shadow: 0 0 100vw 100vw rgba(0, 0, 0, 0.5);
+  animation-name: animatetop;
+  animation-duration: 0.6s
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {top: -10vw; opacity: 0}
+  to {top: 15vw; opacity: 1}
+}
+/* Button for adding points */
+.circlebutton{
+  height: 3vw;
+  width: 3vw;
+  border-radius: 3vw;
+  text-align: center;
+  font-size: 2.75vw;
+  background-color: white;
+  position: absolute;
+  bottom: 1.5vw;
+  right: 1.5vw;
+  opacity: 0.75;
+  color: firebrick;
+}
+.circlebutton:hover{
+  opacity: 1;
+}
+/* Submit button from inside modal */
+input[type="submit"] {
+  background-color: #073763bb;
+  color: white;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.prizeTopic{
+  color: white;
+  font-size: 1vw;
+}
+.prizeName{
+  color: white;
+  font-size: 3vw;
+}
+.prizeCost{
+  color: white;
+  font-size: 1vw;
+}
+.schoolReward{
+  width: 98vw;
+  height: auto;
+  background-color: rgba(178, 34, 34, 0.25);
+  padding: 1vw;
+  vertical-align: middle;
+  position: absolute;
+  top: 8vw;
+  left: 0vw;
+}
+/* Purchase buttons for prizes */
+.purchaseSchoolF{
+  height :3vw;
+  width: 7vw;
+  font-size: 1.25vw;
+  border: none;
+  border-radius: 15px;
+  position: absolute;
+  right: 1vw;
+  top: 29vw;
+}
+.purchaseSchoolS{
+  height :3vw;
+  width: 7vw;
+  font-size: 1.25vw;
+  border-radius: 15px;
+  border: none;
+  position: absolute;
+  left: 1vw;
+  top: 20vw;
+}
+.purchaseSchoolR{
+  height :3vw;
+  width: 7vw;
+  font-size: 1.25vw;
+  border-radius: 15px;
+  border: none;
+  position: absolute;
+  right: 1vw;
+  top: 10.5vw;
+}
+.schoolSpirit{
+  width: 98vw;
+  height: auto;
+  text-align: right;
+  vertical-align: middle;
+  background-color: #0737635d;
+  padding: 1vw;
+  position: absolute;
+  top: 17.5vw;
+  left: 0vw;
+}
+.purchaseSchoolS:hover{
+  opacity: 1;
+}
+.foodReward{
+  width: 98vw;
+  height: auto;
+  background-color: rgba(178, 34, 34, 0.25);
+  padding: 1vw;
+  vertical-align: middle;
+  position: absolute;
+  top: 27vw;
+  left: 0vw;
+}
+/* For sports and clubs page */
+.Sports{
+  width: 100%;
+  height: auto;
+  padding: 1vw;
+  position: absolute;
+  top: 7vw;
+  width: 0;
+}
+
+.sportsText{
+  width: 100%;
+  color: white;
+  vertical-align: middle;
+  font-size: 3vw;
+}
+.sportsDescription{
+  position: absolute;
+  left : 20vw;
+  top: 8.65vw;
+  color: white;
+}
+.sportsBanner{
+  background-color: #0737635d;
+  width: 99vw;
+  height: 31vw;
+  position: absolute;
+  top: 7vw;
+}
+/* For clubs page */
+.clubsBanner{
+  background-color: #0737635d;
+  width: 99vw;
+  height: 37vw;
+  position: absolute;
+  top: 7vw;
+}

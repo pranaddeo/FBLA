@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LHS Studnet Involvement Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Page Setup -->
+  <header class="TBanner"></header>
+  <div class = "mainhead">LHS Student Involvement Tracker</div>
+  <div class = "name">{{session.first_name}} {{session.last_name}}</div>
+  <img src="{{ url_for('static', filename='Logo.png') }}" class="logo">
+  <div class = "welcome">Welcome</div>
+  <div class = "welcomedescription">Welcome to the LHS Student Involvement Tracker!</div>
+<!-- Set up of the 2 buttons in the middle of the page -->
+  <a href = "/Sports"><button class = "sports">View Sports</button></a>
+  <a href = "/Clubs"><button class = "clubs">View Clubs</button></a>
+<!-- Set Up of the menu except now that a person is signed in, they will get all the options -->
+  <div class="dropdown">
+    <div class = "hov">
+      <div class = "bar one"></div>
+      <div class = "bar two"></div>
+      <div class = "bar three"></div>
+      <div class = "square"></div>
+    </div>
+    <div class="dropdown-content">
+      <a href="/Prizes">Prizes</a>
+      <a href="/SOTM">SOTM</a>
+      <a href="/NewClub">New Club</a>
+      <a href="/quarterly-report">Quarterly Report</a>
+      <a href="/FAQ">FAQ</a>
+      <a id="myBtn">Account</a>
+      <a href="/logout">Sign Out</a>
+    </div>
+  </div>
+<!-- Setting up the upcoming events banner -->
+  <div class="Mbanner">
+    <h1 class = "Mtext1">Upcoming</h1>
+    <br><br>
+    <h1 class = "Mtext2">Events</h1>
+    <div class="line"></div>
+    <h1 class="Mevents1">FBLA State</h1>
+    <br></br>
+    <h1 class = "Mevents2">4/17- 4/19</h1>
+    <h1 class="Mevents3">Tennis Tournament</h1>
+    <br></br>
+    <h1 class = "Mevents4">4/20</h1>
+    <h1 class="Mevents5">NHS Meeting</h1>
+    <br></br>
+    <h1 class = "Mevents6">4/25</h1>
+    <h1 class="Mevents7">Track Competition</h1>
+    <br></br>
+    <h1 class = "Mevents8">4/28</h1>
+  </div>
+<!-- Set up of the account pop up button -->
+  <div class="circlebutton" id="mybutton">+</div>
+  <div class="modal-content" id="myModal">
+    <div class="modal-header">
+      <span class="close" id="closebutton">&times;</span>
+      <h2>Welcome {{session.first_name}} {{session.last_name}}</h2>
+    </div>
+    <div class="modal-body">
+      <p>Email: {{session.email}}</p>
+      <p>Password: {{session.password}}</p>
+      <p>Grade: {{session.grade}}</p>
+      <p>Points: {{session.points}}</p>
+      <p>Status: {{session.type}}</p>
+    </div>
+  </div>
+<!-- Set up of the points sytem and how to add points -->
+  <form class="modal-content" id="formModal" method="POST">
+    <div class="modal-header">
+      <span class="close" id="closebutton2">&times;</span>
+      <h2>Add Points</h2>
+    </div>
+    <div class="modal-body">
+      <br>
+      <label for="club">Clubs:</label>
+      <select id="club" name="club" required>
+        <option value=0>Select Club</option>
+        {% for club in session.clubs%}
+          <option value={{club}}>{{club}}</option>
+        {% endfor %}
+      </select>
+      <br><br>
+      <label for="point">Points:</label>
+      <select id="point" name="point" required>
+        <option value=0>0</option>
+        <option value=1>1</option>
+        <option value=2>2</option>
+        <option value=3>3</option>
+        <option value=4>4</option>
+        <option value=5>5</option>
+      </select>
+      <br><br>
+      <label for="point">Add Points:</label>
+      <input type = "checkbox" value = "check" name="check" id="check" required>
+      <br><br>
+      <input type="submit" value="Add" id="subform" required>
+      <br><br>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="{{ url_for('static', filename='modal.js') }}"></script>
+</body>
+</html>

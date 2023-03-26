@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+  <title>Sign Up</title>
+</head>
+<!-- Page setup -->
+<body>
+  <header class="TBanner"></header>
+  <a href = "/"><img src="{{ url_for('static', filename='Logo.png') }}" class="logo"></a>
+  <div class = "mainhead">LHS Student Involvement Tracker</div>
+    <div class="container">
+      <br><br>
+      <br><br>
+      <br><br>
+      <br><br>
+<!-- Menu Setup -->
+      <div class="dropdown">
+        <div class = "hov">
+          <div class = "bar one"></div>
+          <div class = "bar two"></div>
+          <div class = "bar three"></div>
+          <div class = "square"></div>
+        </div>
+        <div class="dropdown-content">
+          <a href="/Prizes">Prizes</a>
+          <a href="/SOTM">SOTM</a>
+          <a href="/quarterly-report">Quarterly Report</a>
+          <a href="/FAQ">FAQ</a>
+        </div>
+      </div>
+        <br>
+<!-- The form setup for someone signing up -->
+        <form method = "POST">
+          <h2>Sign Up</h2>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+          <label for="first_name">First Name:</label>
+          <input type="text" id="first_name" name="first_name" required>
+          <label for="last_name">Last Name:</label>
+          <input type="text" id="last_name" name="last_name" required>
+          <label for="grade">Grade:</label>
+          <select id="grade" name="grade">
+            <option value=9>9th</option>
+            <option value=10>10th</option>
+            <option value=11>11th</option>
+            <option value=12>12th</option>
+          </select>
+          <input type="submit" value="Submit">
+<!-- The link for anyone who already has an account -->
+          <p>Already have an account? <a href="{{url_for('auth.signin')}}" class="login-link">Sign In</a></p>
+        </form>
+    </div>
+</body>
+</html>
